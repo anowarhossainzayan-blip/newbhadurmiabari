@@ -853,5 +853,1142 @@
       display: flex;
 
       align-items: center;
-      just
+      justify-content: center;
+
+      margin-top: 20px;
+
+      padding: 12px;
+
+      background: var(--gold);
+
+      color: var(--navy-dark);
+
+      border-radius: 11px;
+
+      font-weight: 800;
+
+      transition: .2s;
+    }
+
+    .facebook:hover {
+      background: var(--gold-dark);
+
+      color: white;
+    }
+
+    .map {
+      overflow: hidden;
+
+      min-height: 350px;
+
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow);
+
+      border: 1px solid var(--border);
+    }
+
+    .map iframe {
+      display: block;
+
+      width: 100%;
+
+      height: 350px;
+
+      border: none;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: var(--navy-dark);
+
+      color: #dce6ed;
+
+      text-align: center;
+
+      padding: 35px 15px;
+    }
+
+    footer strong {
+      color: var(--gold);
+
+      font-size: 19px;
+    }
+
+    footer .line {
+      width: 50px;
+      height: 3px;
+
+      background: var(--gold);
+
+      margin: 13px auto;
+    }
+
+    footer p {
+      font-size: 12px;
+
+      margin-top: 3px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 800px) {
+
+      .welcome,
+      .heritage,
+      .review-layout,
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .heritage-content {
+        padding: 27px;
+      }
+
+      .heritage img {
+        min-height: 250px;
+        max-height: 330px;
+      }
+
+      .map {
+        min-height: 350px;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .header-inner {
+        width: calc(100% - 20px);
+      }
+
+      .brand {
+        min-height: 64px;
+      }
+
+      .logo {
+        width: 40px;
+        height: 40px;
+
+        font-size: 21px;
+      }
+
+      .brand-text h1 {
+        font-size: 19px;
+      }
+
+      .nav-btn {
+        font-size: 12px;
+
+        padding:
+          10px 10px;
+      }
+
+      .hero {
+        min-height: 450px;
+      }
+
+      .hero-content {
+        padding: 45px 10px;
+      }
+
+      .section {
+        padding: 42px 0;
+      }
+
+      .welcome {
+        padding: 23px;
+      }
+
+      .welcome-image {
+        min-height: 170px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .review-box {
+        padding: 22px;
+      }
+
+      .location-card {
+        padding: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+
+    <div class="header-inner">
+
+      <div class="brand">
+
+        <div class="logo">🏡</div>
+
+        <div class="brand-text">
+          <h1>ভাদুর মিঞা বাড়ি</h1>
+          <span>অফিশিয়াল পারিবারিক পোর্টাল</span>
+        </div>
+
+      </div>
+
+      <nav class="navigation" aria-label="প্রধান নেভিগেশন">
+
+        <button
+          class="nav-btn active"
+          data-page="home"
+          aria-selected="true">
+          🏠 হোম
+        </button>
+
+        <button
+          class="nav-btn"
+          data-page="books"
+          aria-selected="false">
+          📖 বই ও শিক্ষা
+        </button>
+
+        <button
+          class="nav-btn"
+          data-page="heritage"
+          aria-selected="false">
+          🏛️ ঐতিহ্য
+        </button>
+
+        <button
+          class="nav-btn"
+          data-page="reviews"
+          aria-selected="false">
+          ⭐ রিভিউ
+        </button>
+
+        <button
+          class="nav-btn"
+          data-page="location"
+          aria-selected="false">
+          📍 অবস্থান
+        </button>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <section
+      id="home"
+      class="page active">
+
+      <div class="hero">
+
+        <div class="hero-content">
+
+          <span class="hero-badge">
+            ✨ আমাদের পারিবারিক ঐতিহ্য
+          </span>
+
+          <h2>
+            ভাদুর মিঞা বাড়ি
+            অফিশিয়াল পোর্টাল
+          </h2>
+
+          <p>
+            আমাদের ঐতিহ্য, মেলবন্ধন ও শিকড়ের সন্ধান
+          </p>
+
+          <div class="hero-line"></div>
+
+          <button
+            class="hero-button"
+            onclick="switchPage('heritage')">
+            🏛️ আমাদের ঐতিহ্য দেখুন
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="container section">
+
+        <div class="section-heading">
+
+          <h2>
+            আমাদের বাড়িতে আপনাকে স্বাগতম
+          </h2>
+
+          <p>
+            শিকড়ের টানে, পরিবারের বন্ধনে
+          </p>
+
+        </div>
+
+
+        <div class="welcome">
+
+          <div>
+
+            <h3>
+              🏡 ভাদুর মিঞা বাড়ি
+            </h3>
+
+            <p>
+              আমাদের পারিবারিক ঐতিহ্য, স্মৃতি ও ভালোবাসার
+              মিলনস্থল। এই পোর্টালের মাধ্যমে আমরা আমাদের
+              পরিবারের ইতিহাস, সংস্কৃতি এবং প্রিয়
+              স্থানগুলোর পরিচয় তুলে ধরছি।
+            </p>
+
+            <p style="margin-top:12px;">
+              আমাদের শিকড়ের সঙ্গে সংযুক্ত থাকুন এবং
+              নতুন প্রজন্মের কাছে ঐতিহ্যকে এগিয়ে নিয়ে চলুন।
+            </p>
+
+          </div>
+
+          <div
+            class="welcome-image"
+            role="img"
+            aria-label="ভাদুর মিঞা বাড়ির ছবি">
+          </div>
+
+        </div>
+
+
+        <div class="quick-grid">
+
+          <div class="quick-card">
+            <div class="quick-card-icon">🏡</div>
+            <strong>আমাদের বাড়ি</strong>
+            <span>ঐতিহ্যের ঠিকানা</span>
+          </div>
+
+          <div class="quick-card">
+            <div class="quick-card-icon">🤝</div>
+            <strong>পরিবারের বন্ধন</strong>
+            <span>ঐক্য ও ভালোবাসা</span>
+          </div>
+
+          <div class="quick-card">
+            <div class="quick-card-icon">🌿</div>
+            <strong>শিকড়ের সন্ধান</strong>
+            <span>ইতিহাস ও সংস্কৃতি</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BOOKS
+    ========================== -->
+
+    <section
+      id="books"
+      class="page">
+
+      <div class="container section">
+
+        <div class="section-heading">
+
+          <h2>
+            📚 বই ও গুরুজনদের শিক্ষা
+          </h2>
+
+          <p>
+            জ্ঞান, নীতি ও পারিবারিক মূল্যবোধ
+          </p>
+
+        </div>
+
+
+        <div class="cards">
+
+          <article class="card">
+
+            <div class="card-icon">
+              📖
+            </div>
+
+            <h3>
+              📖 ধর্মীয় ও নীতিশিক্ষার বই
+            </h3>
+
+            <p>
+              ধর্মীয় জ্ঞান, নৈতিক শিক্ষা ও সৎ জীবনযাপনের
+              অনুপ্রেরণা আমাদের পরিবারের গুরুত্বপূর্ণ অংশ।
+              বই পাঠের মাধ্যমে সত্যবাদিতা, মানবিকতা,
+              দায়িত্ববোধ ও জ্ঞান অর্জনের অভ্যাস গড়ে
+              তোলা আমাদের লক্ষ্য।
+            </p>
+
+            <p style="margin-top:12px;">
+              ছোট-বড় সবাইকে নিয়মিত বই পড়া, ভালো কাজ করা
+              এবং ন্যায় ও সত্যের পথে চলার শিক্ষা দেওয়া হয়।
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">
+              👴
+            </div>
+
+            <h3>
+              👴 গুরুজনদের অমূল্য উপদেশ
+            </h3>
+
+            <ul class="lesson-list">
+
+              <li>
+                ঐক্য ও সততাই আমাদের পরিবারের মূল স্তম্ভ।
+              </li>
+
+              <li>
+                বড়দের সম্মান ও ছোটদের স্নেহ করার শিক্ষা
+                ধরে রাখাই আমাদের ধর্ম।
+              </li>
+
+              <li>
+                জ্ঞান অর্জনে কখনো অবহেলা কোরো না।
+              </li>
+
+            </ul>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HERITAGE
+    ========================== -->
+
+    <section
+      id="heritage"
+      class="page">
+
+      <div class="container section">
+
+        <div class="section-heading">
+
+          <h2>
+            🏛️ আমাদের ঐতিহ্য
+          </h2>
+
+          <p>
+            ইতিহাসের সঙ্গে আমাদের সম্পর্ক
+          </p>
+
+        </div>
+
+
+        <article class="heritage">
+
+          <img
+            src="1.png"
+            alt="মিয়া বাড়ি জামে মসজিদ"
+            loading="lazy"
+          >
+
+          <div class="heritage-content">
+
+            <span class="tag">
+              ঐতিহাসিক স্থাপনা
+            </span>
+
+            <h3>
+              মিয়া বাড়ি জামে মসজিদ
+            </h3>
+
+            <p>
+              উনবিংশ শতাব্দীর শুরুতে (মোগল আমলের শেষভাগে)
+              প্রতিষ্ঠিত। ২০০২ সালের ডিসেম্বরে মার্বেল
+              পাথর দিয়ে পুনর্নির্মিত হয়।
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         REVIEWS
+    ========================== -->
+
+    <section
+      id="reviews"
+      class="page">
+
+      <div class="container section">
+
+        <div class="section-heading">
+
+          <h2>
+            ⭐ সদস্যদের রিভিউ
+          </h2>
+
+          <p>
+            আপনার মতামত আমাদের জন্য মূল্যবান
+          </p>
+
+        </div>
+
+
+        <div class="review-layout">
+
+
+          <!-- REVIEW FORM -->
+
+          <form
+            class="review-box"
+            id="reviewForm">
+
+            <h3>
+              আপনার মতামত লিখুন
+            </h3>
+
+            <span class="rating-title">
+              আপনার রেটিং নির্বাচন করুন
+            </span>
+
+            <div class="stars">
+
+              <button
+                type="button"
+                class="star"
+                data-rating="1"
+                aria-label="১ তারকা">
+                ★
+              </button>
+
+              <button
+                type="button"
+                class="star"
+                data-rating="2"
+                aria-label="২ তারকা">
+                ★
+              </button>
+
+              <button
+                type="button"
+                class="star"
+                data-rating="3"
+                aria-label="৩ তারকা">
+                ★
+              </button>
+
+              <button
+                type="button"
+                class="star"
+                data-rating="4"
+                aria-label="৪ তারকা">
+                ★
+              </button>
+
+              <button
+                type="button"
+                class="star"
+                data-rating="5"
+                aria-label="৫ তারকা">
+                ★
+              </button>
+
+            </div>
+
+
+            <label
+              class="field-label"
+              for="comment">
+              আপনার মন্তব্য
+            </label>
+
+            <textarea
+              id="comment"
+              maxlength="500"
+              placeholder="ভাদুর মিঞা বাড়ি সম্পর্কে আপনার মতামত লিখুন..."
+              required>
+            </textarea>
+
+
+            <button
+              type="submit"
+              class="submit">
+              ✉️ রিভিউ জমা দিন
+            </button>
+
+            <div
+              class="message"
+              id="message"
+              aria-live="polite">
+            </div>
+
+          </form>
+
+
+          <!-- REVIEW LIST -->
+
+          <div class="review-box">
+
+            <h3>
+              💬 সদস্যদের মতামত
+            </h3>
+
+            <div
+              id="reviewList"
+              class="review-list">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOCATION
+    ========================== -->
+
+    <section
+      id="location"
+      class="page">
+
+      <div class="container section">
+
+        <div class="section-heading">
+
+          <h2>
+            📍 অবস্থান ও যোগাযোগ
+          </h2>
+
+          <p>
+            আমাদের ঠিকানা খুঁজে নিন
+          </p>
+
+        </div>
+
+
+        <div class="location-grid">
+
+
+          <div>
+
+            <div class="location-card">
+
+              <h3>
+                🏡 ভাদুর মিঞা বাড়ি
+              </h3>
+
+              <p>
+                📍 ঠিকানা: Bhadur Mia Bari,
+                এরশাদ হোসেন রোড,
+                রামগঞ্জ ৩৭২০।
+              </p>
+
+              <a
+                class="facebook"
+                href="https://www.facebook.com/share/g/197qJGTB8G/"
+                target="_blank"
+                rel="noopener noreferrer">
+                👥 অফিশিয়াল ফেসবুক গ্রুপে যুক্ত হন
+              </a>
+
+            </div>
+
+
+            <div class="location-card">
+
+              <h3>
+                🤝 আমাদের সঙ্গে যুক্ত থাকুন
+              </h3>
+
+              <p>
+                আমাদের অফিশিয়াল ফেসবুক গ্রুপে যোগ দিয়ে
+                পরিবারের খবরাখবর, অনুষ্ঠান ও স্মৃতিগুলো
+                সবার সঙ্গে ভাগ করে নিন।
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="map">
+
+            <iframe
+              title="ভাদুর মিঞা বাড়ির গুগল ম্যাপ"
+              src="https://maps.google.com/maps?q=Bhadur+Mia+Bari,Ershad+Hossain+Rd,Ramganj+3720&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="350"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <strong>
+      ভাদুর মিঞা বাড়ি
+    </strong>
+
+    <div class="line"></div>
+
+    <p>
+      আমাদের ঐতিহ্য, মেলবন্ধন ও শিকড়ের সন্ধান
+    </p>
+
+    <p>
+      © <span id="year"></span>
+      ভাদুর মিঞা বাড়ি।
+      সর্বস্বত্ব সংরক্ষিত।
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    /* =========================
+       TAB SYSTEM
+    ========================== */
+
+    const navButtons =
+      document.querySelectorAll(".nav-btn");
+
+    const pages =
+      document.querySelectorAll(".page");
+
+
+    function switchPage(pageName) {
+
+      pages.forEach(page => {
+
+        page.classList.toggle(
+          "active",
+          page.id === pageName
+        );
+
+      });
+
+
+      navButtons.forEach(button => {
+
+        const active =
+          button.dataset.page === pageName;
+
+        button.classList.toggle(
+          "active",
+          active
+        );
+
+        button.setAttribute(
+          "aria-selected",
+          active
+        );
+
+      });
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+
+    navButtons.forEach(button => {
+
+      button.addEventListener(
+        "click",
+        () => {
+          switchPage(button.dataset.page);
+        }
+      );
+
+    });
+
+
+    /* =========================
+       STAR RATING
+    ========================== */
+
+    const stars =
+      document.querySelectorAll(".star");
+
+    let selectedRating = 0;
+
+
+    function setRating(rating) {
+
+      selectedRating = rating;
+
+      stars.forEach(star => {
+
+        const active =
+          Number(star.dataset.rating) <= rating;
+
+        star.classList.toggle(
+          "active",
+          active
+        );
+
+      });
+
+    }
+
+
+    stars.forEach(star => {
+
+      star.addEventListener(
+        "click",
+        () => {
+
+          setRating(
+            Number(star.dataset.rating)
+          );
+
+        }
+      );
+
+    });
+
+
+    /* =========================
+       LOCAL STORAGE REVIEWS
+    ========================== */
+
+    const STORAGE_KEY =
+      "bhadurMiaBariReviews";
+
+
+    const form =
+      document.getElementById("reviewForm");
+
+    const comment =
+      document.getElementById("comment");
+
+    const message =
+      document.getElementById("message");
+
+    const reviewList =
+      document.getElementById("reviewList");
+
+
+    function getReviews() {
+
+      try {
+
+        const saved =
+          localStorage.getItem(STORAGE_KEY);
+
+        const reviews =
+          saved ? JSON.parse(saved) : [];
+
+        return Array.isArray(reviews)
+          ? reviews
+          : [];
+
+      } catch {
+
+        return [];
+
+      }
+
+    }
+
+
+    function saveReviews(reviews) {
+
+      try {
+
+        localStorage.setItem(
+          STORAGE_KEY,
+          JSON.stringify(reviews)
+        );
+
+        return true;
+
+      } catch {
+
+        return false;
+
+      }
+
+    }
+
+
+    function renderReviews() {
+
+      const reviews =
+        getReviews();
+
+      reviewList.innerHTML = "";
+
+
+      if (reviews.length === 0) {
+
+        const empty =
+          document.createElement("div");
+
+        empty.className = "empty";
+
+        empty.textContent =
+          "এখনো কোনো রিভিউ জমা পড়েনি। আপনার মতামত প্রথমে লিখুন!";
+
+        reviewList.appendChild(empty);
+
+        return;
+
+      }
+
+
+      reviews
+        .slice()
+        .reverse()
+        .forEach(review => {
+
+          const item =
+            document.createElement("article");
+
+          item.className =
+            "review-item";
+
+
+          const header =
+            document.createElement("div");
+
+          header.className =
+            "review-header";
+
+
+          const member =
+            document.createElement("span");
+
+          member.className =
+            "member";
+
+          member.textContent =
+            "একজন সদস্য";
+
+
+          const rating =
+            document.createElement("span");
+
+          rating.className =
+            "review-stars";
+
+          rating.textContent =
+            "★".repeat(review.rating) +
+            "☆".repeat(5 - review.rating);
+
+
+          header.appendChild(member);
+          header.appendChild(rating);
+
+
+          const text =
+            document.createElement("p");
+
+          text.textContent =
+            review.comment;
+
+
+          const date =
+            document.createElement("div");
+
+          date.className =
+            "review-date";
+
+          date.textContent =
+            review.date;
+
+
+          item.appendChild(header);
+          item.appendChild(text);
+          item.appendChild(date);
+
+          reviewList.appendChild(item);
+
+        });
+
+    }
+
+
+    /* =========================
+       SUBMIT REVIEW
+    ========================== */
+
+    form.addEventListener(
+      "submit",
+      event => {
+
+        event.preventDefault();
+
+
+        const text =
+          comment.value.trim();
+
+
+        if (selectedRating === 0) {
+
+          message.style.color =
+            "#b45309";
+
+          message.textContent =
+            "দয়া করে ১ থেকে ৫ তারকা নির্বাচন করুন।";
+
+          return;
+
+        }
+
+
+        if (!text) {
+
+          message.style.color =
+            "#b45309";
+
+          message.textContent =
+            "দয়া করে আপনার মন্তব্য লিখুন।";
+
+          return;
+
+        }
+
+
+        const reviews =
+          getReviews();
+
+
+        reviews.push({
+
+          rating:
+            selectedRating,
+
+          comment:
+            text,
+
+          date:
+            new Date().toLocaleDateString(
+              "bn-BD",
+              {
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+              }
+            )
+
+        });
+
+
+        const saved =
+          saveReviews(reviews);
+
+
+        if (!saved) {
+
+          message.style.color =
+            "#b91c1c";
+
+          message.textContent =
+            "রিভিউ সংরক্ষণ করা যায়নি।";
+
+          return;
+
+        }
+
+
+        renderReviews();
+
+
+        form.reset();
+
+        setRating(0);
+
+
+        message.style.color =
+          "#16803c";
+
+        message.textContent =
+          "আপনার রিভিউ সফলভাবে জমা হয়েছে। ধন্যবাদ!";
+
+      }
+    );
+
+
+    /* =========================
+       YEAR
+    ========================== */
+
+    document.getElementById("year")
+      .textContent =
+      new Date().getFullYear();
+
+
+    /* =========================
+       INITIAL LOAD
+    ========================== */
+
+    renderReviews();
+
+  </script>
+
+</body>
+</html>
 ```
