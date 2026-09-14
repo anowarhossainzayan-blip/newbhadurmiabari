@@ -3,131 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ভাদুর মিয়া বাড়ি - BHADUR MIA BARI</title>
+  <title>ভাদুর মিয়া বাড়ি | প্রাতিষ্ঠানিক ঐতিহ্য ও ইতিহাস</title>
   
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Professional Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-main: #ffffff;
-      --bg-secondary: #f9f9f9;
+      --primary: #0f172a;
+      --primary-light: #1e293b;
+      --accent: #d97706;
+      --accent-hover: #b45309;
+      --bg-body: #f8fafc;
       --bg-card: #ffffff;
-      --bg-light: #edf2f7;
-      --text-main: #333333;
-      --text-muted: #555555;
-      --nav-bg: #143d59;
-      --accent-color: #f4b41a;
-      --border-color: #cbd5e0;
-      --shadow: 0 4px 12px rgba(0,0,0,0.08);
+      --text-main: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+      --radius: 12px;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Hind Siliguri', sans-serif; color: var(--text-main); line-height: 1.6; background-color: var(--bg-main); width: 100%; overflow-x: hidden; }
+    body { font-family: 'Hind Siliguri', 'Plus Jakarta Sans', sans-serif; background-color: var(--bg-body); color: var(--text-main); line-height: 1.7; overflow-x: hidden; }
 
-    /* Auth Screen Box */
-    .auth-page { width: 100%; min-height: 100vh; background: var(--bg-secondary); display: flex; align-items: center; justify-content: center; padding: 40px 20px; }
-    .auth-box { background: var(--bg-card); width: 100%; max-width: 400px; padding: 35px 25px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); text-align: center; }
-    .auth-box h2 { color: var(--nav-bg); margin-bottom: 25px; font-family: 'Poppins', sans-serif; font-size: 1.8rem; }
-    .form-group { margin-bottom: 18px; text-align: left; }
-    .form-group label { display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.95rem; color: var(--text-muted); }
-    .form-group input, .form-group textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: 8px; font-size: 0.95rem; outline: none; font-family: 'Hind Siliguri', sans-serif; background-color: var(--bg-main); color: var(--text-main); transition: border-color 0.2s; }
-    .form-group input:focus, .form-group textarea:focus { border-color: var(--nav-bg); }
-    .auth-btn { width: 100%; padding: 12px; background-color: var(--nav-bg); color: #fff; border: none; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; margin-top: 10px; transition: background-color 0.2s; }
-    .auth-btn:hover { background-color: #0e2a3e; }
-    .toggle-link { display: inline-block; margin-top: 20px; font-size: 0.9rem; color: #1877f2; text-decoration: underline; cursor: pointer; }
+    /* Professional Auth Screen */
+    .auth-page { width: 100vw; height: 100vh; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .auth-box { background: rgba(255, 255, 255, 0.98); width: 100%; max-width: 420px; padding: 40px 30px; border-radius: 16px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); }
+    .auth-box h2 { color: var(--primary); margin-bottom: 25px; font-weight: 700; font-size: 1.6rem; text-align: center; }
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; color: var(--primary); }
+    .form-group input, .form-group textarea { width: 100%; padding: 12px 16px; border: 1.5px solid var(--border); border-radius: var(--radius); font-size: 0.95rem; outline: none; background: #fff; color: var(--text-main); transition: all 0.2s ease; font-family: inherit; }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 4px rgba(217, 119, 6, 0.1); }
+    .auth-btn { width: 100%; padding: 13px; background-color: var(--primary); color: #fff; border: none; border-radius: var(--radius); font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s; margin-top: 10px; }
+    .auth-btn:hover { background-color: var(--accent); }
+    .toggle-link { display: block; text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--accent); text-decoration: none; font-weight: 500; cursor: pointer; }
+    .toggle-link:hover { text-decoration: underline; }
 
-    /* Main Website Content */
-    #main-website-content { background-color: var(--bg-secondary); width: 100%; }
-    .container { width: 90%; max-width: 1100px; margin: 0 auto; }
-
-    /* Navbar */
-    .navbar { background-color: var(--nav-bg); position: sticky; top: 0; z-index: 100; }
-    .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
-    .logo { color: #fff; font-size: 1.3rem; font-weight: bold; cursor: pointer; }
-    .nav-tabs { display: flex; gap: 10px; list-style: none; align-items: center; }
-    .nav-tab-btn { background: transparent; border: none; color: #fff; font-size: 1rem; font-weight: 600; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-family: 'Hind Siliguri', sans-serif; transition: all 0.2s; }
-    .nav-tab-btn:hover, .nav-tab-btn.active { background-color: var(--accent-color); color: #143d59; }
-    .user-status-nav { color: #fff; font-size: 0.95rem; display: flex; align-items: center; gap: 15px; }
-    .logout-btn-nav { background: #e53e3e; color: white; border: none; padding: 6px 14px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-    .logout-btn-nav:hover { background: #c53030; }
+    /* Professional Navbar */
+    .navbar { background-color: #ffffff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+    .logo { color: var(--primary); font-size: 1.25rem; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+    .nav-tabs { display: flex; gap: 6px; list-style: none; align-items: center; }
+    .nav-tab-btn { background: transparent; border: none; color: var(--text-muted); font-size: 0.95rem; font-weight: 600; padding: 10px 18px; border-radius: var(--radius); cursor: pointer; transition: all 0.2s; font-family: inherit; }
+    .nav-tab-btn:hover, .nav-tab-btn.active { background-color: #f1f5f9; color: var(--accent); }
+    .user-status-nav { display: flex; align-items: center; gap: 15px; font-size: 0.9rem; }
+    .logout-btn-nav { background: #fee2e2; color: #dc2626; border: none; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; transition: background 0.2s; font-family: inherit; }
+    .logout-btn-nav:hover { background: #fecaca; }
 
     /* Hero Section */
-    .hero { background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1200x500?text=Bhadur+Mia+Bari'); background-size: cover; background-position: center; padding: 80px 20px; text-align: center; color: #fff; }
-    .welcome-title { font-family: 'Poppins', sans-serif; font-size: 2.3rem; font-weight: 700; color: var(--accent-color); text-shadow: 2px 2px 5px rgba(0,0,0,0.7); margin-bottom: 10px; }
-    .subtitle { font-size: 1.2rem; margin-bottom: 20px; }
-    .btn { display: inline-block; padding: 12px 28px; background-color: var(--accent-color); color: #143d59; text-decoration: none; font-weight: bold; border-radius: 5px; margin: 5px; cursor: pointer; border: none; font-size: 1rem; font-family: 'Hind Siliguri', sans-serif; transition: background-color 0.2s; }
-    .btn:hover { background-color: #d99e12; }
+    .hero { background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), url('https://images.unsplash.com/photo-1541971875076-8f970d573be6?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; padding: 100px 20px; text-align: center; color: #fff; }
+    .welcome-title { font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing: -0.5px; }
+    .welcome-title span { color: var(--accent); }
+    .subtitle { font-size: 1.1rem; color: #94a3b8; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .btn { display: inline-block; padding: 12px 28px; background-color: var(--accent); color: #fff; text-decoration: none; font-weight: 600; border-radius: var(--radius); cursor: pointer; border: none; font-size: 0.95rem; transition: background 0.2s; font-family: inherit; }
+    .btn:hover { background-color: var(--accent-hover); }
 
     .tab-content { display: none; }
     .tab-content.active { display: block; }
-    .section { padding: 50px 0; }
-    .bg-light { background-color: var(--bg-light); }
-    .section-title { text-align: center; font-size: 1.8rem; margin-bottom: 25px; color: var(--text-main); }
+    .section { padding: 75px 0; }
+    .bg-light { background-color: #f1f5f9; }
+    .section-title { text-align: center; font-size: 2rem; font-weight: 700; margin-bottom: 45px; color: var(--primary); }
     
-    .heritage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 20px; }
-    .heritage-card { background: var(--bg-card); border-radius: 8px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--border-color); }
-    .heritage-card img { width: 100%; height: 200px; object-fit: cover; }
-    .heritage-content { padding: 20px; }
-    
-    .vip-category { margin-bottom: 35px; }
-    .category-title { font-size: 1.3rem; color: var(--text-main); border-bottom: 2px solid var(--accent-color); padding-bottom: 5px; margin-bottom: 15px; display: inline-block; }
-    .vip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .vip-card { background: var(--bg-card); padding: 20px; border-radius: 8px; box-shadow: var(--shadow); border: 1px solid var(--border-color); border-left: 4px solid var(--nav-bg); }
-    .vip-name { font-size: 1.15rem; color: var(--text-main); font-weight: 700; margin-bottom: 4px; }
-    .vip-title-tag { font-size: 0.85rem; color: #e53e3e; font-weight: 600; margin-bottom: 8px; }
-    .vip-history { font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; }
+    .heritage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .heritage-card { background: var(--bg-card); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border); transition: transform 0.2s; }
+    .heritage-card:hover { transform: translateY(-5px); }
+    .heritage-card img { width: 100%; height: 220px; object-fit: cover; }
+    .heritage-content { padding: 25px; }
+    .heritage-content h3 { color: var(--primary); font-size: 1.25rem; margin-bottom: 10px; font-weight: 700; }
+    .heritage-content p { color: var(--text-muted); font-size: 0.95rem; }
 
-    .member-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 800px; margin: 0 auto; }
-    .member-badge { background: var(--nav-bg); color: #fff; padding: 8px 18px; border-radius: 20px; font-weight: 500; display: flex; align-items: center; gap: 8px; }
-    .admin-badge { background-color: #e53e3e; color: white; font-size: 0.75rem; padding: 2px 8px; border-radius: 10px; }
+    .vip-category { margin-bottom: 40px; }
+    .category-title { font-size: 1.2rem; color: var(--primary); border-left: 4px solid var(--accent); padding-left: 12px; margin-bottom: 20px; font-weight: 700; }
+    .vip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .vip-card { background: var(--bg-card); padding: 25px; border-radius: var(--radius); box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+    .vip-name { font-size: 1.1rem; color: var(--primary); font-weight: 700; margin-bottom: 4px; }
+    .vip-title-tag { font-size: 0.8rem; color: #dc2626; font-weight: 600; text-transform: uppercase; margin-bottom: 10px; display: inline-block; background: #fee2e2; padding: 2px 8px; border-radius: 4px; }
+    .vip-history { font-size: 0.9rem; color: var(--text-muted); }
 
-    .admin-panel { display: none; background: var(--bg-card); padding: 20px; border-radius: 10px; margin-top: 30px; box-shadow: var(--shadow); border: 1px solid var(--border-color); border-top: 5px solid #e53e3e; overflow-x: auto; }
-    .admin-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-    .admin-table th, .admin-table td { border: 1px solid var(--border-color); padding: 10px; text-align: left; }
-    .admin-table th { background-color: var(--nav-bg); color: white; }
+    .member-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 900px; margin: 0 auto; }
+    .member-badge { background: var(--bg-card); border: 1px solid var(--border); color: var(--primary); padding: 10px 20px; border-radius: var(--radius); font-weight: 600; display: flex; align-items: center; gap: 10px; box-shadow: var(--shadow-sm); }
+    .admin-badge { background-color: #fee2e2; color: #dc2626; font-size: 0.7rem; padding: 3px 8px; border-radius: 6px; font-weight: 700; }
 
-    /* Review Styles */
-    .review-card { background: var(--bg-card); padding: 25px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); max-width: 600px; margin: 0 auto 35px auto; }
-    .stars-input { display: flex; justify-content: center; direction: rtl; font-size: 32px; margin-bottom: 15px; }
+    .admin-panel { display: none; background: var(--bg-card); padding: 30px; border-radius: var(--radius); margin-top: 40px; box-shadow: var(--shadow-md); border: 1px solid var(--border); overflow-x: auto; }
+    .admin-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
+    .admin-table th, .admin-table td { border: 1px solid var(--border); padding: 12px 15px; text-align: left; }
+    .admin-table th { background-color: var(--primary); color: white; font-weight: 600; }
+
+    /* Review Card Layout */
+    .review-card { background: var(--bg-card); padding: 30px; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--border); max-width: 650px; margin: 0 auto 40px auto; }
+    .stars-input { display: flex; justify-content: center; direction: rtl; font-size: 32px; margin-bottom: 20px; }
     .stars-input input { display: none; }
-    .stars-input label { color: var(--border-color); cursor: pointer; transition: color 0.2s; }
-    .stars-input label:hover, .stars-input label:hover ~ label, .stars-input input:checked ~ label { color: var(--accent-color); }
-    .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
-    .review-item { background: var(--bg-card); padding: 18px; border-radius: 8px; border-left: 4px solid var(--accent-color); box-shadow: var(--shadow); border: 1px solid var(--border-color); }
-    .review-item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-    .review-item-name { font-weight: 700; color: var(--text-main); }
-    .review-item-stars { color: var(--accent-color); font-size: 16px; }
+    .stars-input label { color: var(--border); cursor: pointer; transition: color 0.2s; }
+    .stars-input label:hover, .stars-input label:hover ~ label, .stars-input input:checked ~ label { color: var(--accent); }
+    .review-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .review-item { background: var(--bg-card); padding: 22px; border-radius: var(--radius); box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
+    .review-item-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+    .review-item-name { font-weight: 700; color: var(--primary); }
+    .review-item-stars { color: var(--accent); font-size: 15px; }
     .review-item-comment { color: var(--text-muted); font-size: 0.95rem; }
 
-    .single-event-box { max-width: 600px; margin: 0 auto; background: var(--bg-card); border-top: 6px solid var(--accent-color); padding: 35px 25px; border-radius: 12px; box-shadow: var(--shadow); border: 1px solid var(--border-color); text-align: center; }
-    .event-badge-tag { display: inline-block; background: #e53e3e; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 12px; }
-    .group-section { text-align: center; background-color: var(--bg-card); }
-    .group-btn-link { display: inline-block; padding: 14px 32px; background-color: #1877f2; color: #ffffff; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-radius: 50px; transition: background-color 0.2s; }
-    .group-btn-link:hover { background-color: #145dbf; }
-    .map-box { border-radius: 12px; overflow: hidden; margin-bottom: 15px; }
+    .single-event-box { max-width: 650px; margin: 0 auto; background: var(--bg-card); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--border); text-align: center; }
+    .event-badge-tag { display: inline-block; background: #e0f2fe; color: #0284c7; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: 700; margin-bottom: 15px; text-transform: uppercase; }
+    
+    .group-section { text-align: center; }
+    .group-btn-link { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; background-color: #2563eb; color: #ffffff; font-size: 1rem; font-weight: 600; text-decoration: none; border-radius: var(--radius); transition: background 0.2s; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); }
+    .group-btn-link:hover { background-color: #1d4ed8; }
+    .map-box { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--border); }
 
-    /* REFINED & PROFESSIONAL AI FLOATING WIDGET STYLES */
-    .ai-widget-btn { position: fixed; bottom: 25px; right: 25px; width: 62px; height: 62px; border-radius: 50%; background: linear-gradient(135deg, #143d59, #0e2a3e); border: 2px solid var(--accent-color); display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 6px 20px rgba(20, 61, 89, 0.4); z-index: 1000; transition: all 0.3s ease; }
-    .ai-widget-btn:hover { transform: scale(1.1) rotate(5deg); box-shadow: 0 8px 25px rgba(244, 180, 26, 0.5); }
-    .ai-custom-icon { width: 32px; height: 32px; }
-
-    .ai-chat-box { position: fixed; bottom: 98px; right: 25px; width: 380px; max-width: 90vw; height: 520px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,0.2); display: none; flex-direction: column; z-index: 1000; overflow: hidden; }
-    .ai-chat-header { background: linear-gradient(135deg, #143d59, #1c5276); color: #fff; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; }
-    .ai-chat-header-title { display: flex; align-items: center; gap: 10px; font-size: 1rem; font-weight: 700; }
-    .ai-close-btn { background: transparent; border: none; color: #fff; font-size: 18px; cursor: pointer; opacity: 0.8; }
-    .ai-close-btn:hover { opacity: 1; }
-
-    .ai-chat-messages { flex: 1; padding: 15px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; font-size: 0.95rem; }
-    .ai-msg { padding: 10px 14px; border-radius: 12px; max-width: 88%; line-height: 1.5; word-wrap: break-word; }
-    .ai-msg.bot { background: var(--bg-light); color: var(--text-main); align-self: flex-start; border-bottom-left-radius: 2px; }
-    .ai-msg.user { background: var(--nav-bg); color: #fff; align-self: flex-end; border-bottom-right-radius: 2px; }
-
-    .ai-chat-input-area { padding: 12px; border-top: 1px solid var(--border-color); display: flex; gap: 8px; background: var(--bg-main); }
-    .ai-chat-input-area input { flex: 1; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 20px; outline: none; background: var(--bg-card); color: var(--text-main); font-family: 'Hind Siliguri', sans-serif; }
-    .ai-send-btn { background: var(--nav-bg); color: var(--accent-color); border: none; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-    .ai-send-btn:hover { background: #0e2a3e; }
-
-    footer { background-color: var(--nav-bg); color: #fff; text-align: center; padding: 20px 0; }
+    footer { background-color: var(--primary); color: #94a3b8; text-align: center; padding: 25px 0; font-size: 0.9rem; border-top: 1px solid #1e293b; }
   </style>
 </head>
 <body>
@@ -135,47 +120,47 @@
   <!-- Authentication Box -->
   <div id="auth-page" class="auth-page">
     <div id="login-box" class="auth-box">
-      <h2>Login করুন</h2>
+      <h2>অ্যাকাউন্টে প্রবেশ করুন</h2>
       <form onsubmit="handleLogin(event)">
         <div class="form-group">
-          <label>Name (নাম)</label>
-          <input type="text" id="login-name" required placeholder="আপনার নাম লিখুন">
+          <label>আপনার নাম (Username)</label>
+          <input type="text" id="login-name" required placeholder="উদাহরণ: Zayan">
         </div>
         <div class="form-group">
-          <label>Password (পাসওয়ার্ড)</label>
-          <input type="password" id="login-pass" required placeholder="পাসওয়ার্ড দিন">
+          <label>পাসওয়ার্ড (Password)</label>
+          <input type="password" id="login-pass" required placeholder="••••••••">
         </div>
-        <button type="submit" class="auth-btn">Login</button>
+        <button type="submit" class="auth-btn">লগইন</button>
       </form>
-      <span class="toggle-link" onclick="showRegisterForm()">No account? Create account</span>
+      <span class="toggle-link" onclick="showRegisterForm()">নতুন অ্যাকাউন্ট তৈরি করতে চান?</span>
     </div>
 
     <div id="register-box" class="auth-box" style="display: none;">
-      <h2>Create Account</h2>
+      <h2>রেজিস্ট্রেশন করুন</h2>
       <form onsubmit="handleRegister(event)">
         <div class="form-group">
-          <label>Name (নাম)</label>
+          <label>পূর্ণ নাম (Name)</label>
           <input type="text" id="reg-name" required placeholder="আপনার নাম লিখুন">
         </div>
         <div class="form-group">
-          <label>Password (পাসওয়ার্ড)</label>
-          <input type="password" id="reg-pass" required placeholder="পাসওয়ার্ড নির্ধারণ করুন">
+          <label>পাসওয়ার্ড (Password)</label>
+          <input type="password" id="reg-pass" required placeholder="একটি শক্তিশালী পাসওয়ার্ড দিন">
         </div>
         <div class="form-group">
-          <label>Birthdate (জন্ম তারিখ)</label>
+          <label>জন্ম তারিখ (Birthdate)</label>
           <input type="date" id="reg-birthdate" required>
         </div>
         <div class="form-group">
-          <label>Religion (ধর্ম)</label>
-          <input type="text" id="reg-religion" required placeholder="উদাহরণ: ইসলাম, হিন্দু ইত্যাদি">
+          <label>ধর্ম (Religion)</label>
+          <input type="text" id="reg-religion" required placeholder="যেমন: ইসলাম">
         </div>
         <div class="form-group">
-          <label>Family (পরিবারের তথ্য / বংশ)</label>
-          <input type="text" id="reg-family" required placeholder="পিতার নাম বা বংশের পরিচয়">
+          <label>পরিবারের তথ্য / বংশ পরিচয়</label>
+          <input type="text" id="reg-family" required placeholder="পিতার নাম বা বংশ">
         </div>
-        <button type="submit" class="auth-btn">Register</button>
+        <button type="submit" class="auth-btn">রেজিস্ট্রার সম্পন্ন করুন</button>
       </form>
-      <span class="toggle-link" onclick="showLoginForm()">Already have an account? Login</span>
+      <span class="toggle-link" onclick="showLoginForm()">ইতিমধ্যে অ্যাকাউন্ট আছে? লগইন করুন</span>
     </div>
   </div>
 
@@ -183,14 +168,14 @@
   <div id="main-website-content" style="display: none;">
     <nav class="navbar">
       <div class="container nav-container">
-        <div class="logo" onclick="switchTab('home-tab')">ভাদুর মিয়া বাড়ি</div>
+        <div class="logo" onclick="switchTab('home-tab')">🏛️ ভাদুর মিয়া বাড়ি</div>
         <ul class="nav-tabs">
-          <li><button id="btn-home-tab" class="nav-tab-btn active" onclick="switchTab('home-tab')">🏠 হোম</button></li>
-          <li><button id="btn-elders-tab" class="nav-tab-btn" onclick="switchTab('elders-tab')">📚 গুরুজন ও বই</button></li>
+          <li><button id="btn-home-tab" class="nav-tab-btn active" onclick="switchTab('home-tab')">হোম</button></li>
+          <li><button id="btn-elders-tab" class="nav-tab-btn" onclick="switchTab('elders-tab')">গুরুজন ও বই</button></li>
         </ul>
         <div class="user-status-nav">
           <span id="nav-username"></span>
-          <button onclick="handleLogout()" class="logout-btn-nav">Logout</button>
+          <button onclick="handleLogout()" class="logout-btn-nav">লগআউট</button>
         </div>
       </div>
     </nav>
@@ -199,28 +184,28 @@
     <div id="home-tab" class="tab-content active">
       <header class="hero">
         <div class="container">
-          <h1 class="welcome-title">WELCOME TO BHADUR MIA BARI</h1>
-          <p class="subtitle">এরশাদ হোসেন রোড, রামগঞ্জ ৩৭২০ | ঐতিহ্য ও ইতিহাসের প্রতীক</p>
-          <button onclick="switchTab('elders-tab')" class="btn">📖 গুরুজন ও বইয়ের তথ্য দেখুন</button>
+          <h1 class="welcome-title">WELCOME TO <span>BHADUR MIA BARI</span></h1>
+          <p class="subtitle">এরশাদ হোসেন রোড, রামগঞ্জ ৩৭২০ — ঐতিহ্য, কৃষ্টি ও ইতিহাসের এক অনন্য নিদর্শন।</p>
+          <button onclick="switchTab('elders-tab')" class="btn">গুরুজন ও প্রকাশনা দেখুন</button>
         </div>
       </header>
 
       <section class="section bg-light">
         <div class="container">
-          <h2 class="section-title">ঐতিহাসিক স্থাপনা ও পরিচিতি</h2>
+          <h2 class="section-title">ঐতিহাসিক স্থাপনা পরিচিতি</h2>
           <div class="heritage-grid">
             <div class="heritage-card">
-              <img src="https://via.placeholder.com/600x400?text=Mia+Bari+Jame+Mosque" alt="মসজিদ">
+              <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="মসজিদ">
               <div class="heritage-content">
                 <h3>মিয়া বাড়ি জামে মসজিদ</h3>
-                <p>উনবিংশ শতাব্দীর শুরুতে (মোগল আমলের শেষভাগে) প্রতিষ্ঠিত। ২০০২ সালের ডিসেম্বরে মার্বেল পাথর দিয়ে পুনর্নির্মিত হয়।</p>
+                <p>উনবিংশ শতাব্দীর শুরুতে (মোগল আমলের শেষভাগে) প্রতিষ্ঠিত। ২০০২ সালের ডিসেম্বরে মার্বেল পাথরে আধুনিকায়ন করা হয়।</p>
               </div>
             </div>
             <div class="heritage-card">
-              <img src="https://via.placeholder.com/600x400?text=Ershad+Manzil" alt="এরশাদ মঞ্জিল">
+              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="এরশাদ মঞ্জিল">
               <div class="heritage-content">
                 <h3>ঐতিহ্যবাহী "এরশাদ মঞ্জিল"</h3>
-                <p>১৮৯৫ থেকে ১৯০৫ সালের মধ্যে নির্মিত তৎকালীন নোয়াখালী অঞ্চলের বিরল ৩টি ইটের দালানের একটি।</p>
+                <p>১৮৯৫ থেকে ১৯০৫ সালের মধ্যে নির্মিত তৎকালীন নোয়াখালী অঞ্চলের বিরল তিনটি ঐতিহাসিক ইটের দালানের একটি।</p>
               </div>
             </div>
           </div>
@@ -229,7 +214,7 @@
 
       <section class="section">
         <div class="container">
-          <h2 class="section-title">রিভিউ ও রেটিং দিন</h2>
+          <h2 class="section-title">আপনার অভিজ্ঞতা শেয়ার করুন</h2>
           <div class="review-card">
             <form id="reviewForm" onsubmit="addReview(event)">
               <div class="stars-input">
@@ -240,25 +225,25 @@
                 <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
               </div>
               <div class="form-group">
-                <textarea id="userComment" rows="3" placeholder="আপনার অনুভূতি বা অভিজ্ঞতা সংক্ষেপে লিখুন..." required></textarea>
+                <textarea id="userComment" rows="3" placeholder="সম্পর্কে আপনার মতামত বা অনুভূতি লিখুন..." required></textarea>
               </div>
-              <button type="submit" class="auth-btn">রিভিউ জমা দিন</button>
+              <button type="submit" class="auth-btn">রিভিউ সাবমিট করুন</button>
             </form>
           </div>
-          <h3 style="color: var(--text-main); text-align: center; margin-bottom: 20px;">সকল সদস্যের রিভিউসমূহ</h3>
+          <h3 style="color: var(--primary); text-align: center; margin-bottom: 25px; font-weight: 700;">সদস্যদের রিভিউসমূহ</h3>
           <div id="reviewsDisplay" class="review-grid"></div>
         </div>
       </section>
 
       <section id="members-section" class="section bg-light">
         <div class="container">
-          <h2 class="section-title">রেজিস্ট্রার্ড সদস্যবৃন্দ</h2>
+          <h2 class="section-title">নিবন্ধিত সদস্যবৃন্দ</h2>
           <div id="member-list" class="member-grid"></div>
           <div id="admin-panel" class="admin-panel">
-            <h3 style="color: #e53e3e; text-align: center;">🔒 অ্যাডমিন প্যানেল: ইউজার তথ্য</h3>
+            <h3 style="color: #dc2626; text-align: center; margin-bottom: 10px;">🔒 অ্যাডমিন কনট্রোল প্যানেল</h3>
             <table class="admin-table">
               <thead>
-                <tr><th>ইউজার নাম</th><th>জন্ম তারিখ</th><th>ধর্ম</th><th>পরিবার</th><th>সর্বশেষ লগইন</th></tr>
+                <tr><th>ইউজার নাম</th><th>জন্ম তারিখ</th><th>ধর্ম</th><th>বংশ পরিচয়</th><th>সর্বশেষ লগইন</th></tr>
               </thead>
               <tbody id="login-logs-body"></tbody>
             </table>
@@ -266,31 +251,31 @@
         </div>
       </section>
 
-      <section id="events-section" class="section">
+      <section class="section">
         <div class="container">
-          <h2 class="section-title">সাম্প্রতিক ইভেন্ট</h2>
+          <h2 class="section-title">বিশেষ ইভেন্ট</h2>
           <div class="single-event-box">
-            <span class="event-badge-tag">RECENT EVENT</span>
-            <h3 class="event-main-title">🎉 GET TOGETHER</h3>
-            <p>ভাদুর মিয়া বাড়ির সকল সদস্য ও গুণীজনদের নিয়ে বিশেষ গেট-টুগেদার অনুষ্ঠান।</p>
+            <span class="event-badge-tag">UPCOMING EVENT</span>
+            <h3 style="color: var(--primary); margin-bottom: 10px; font-size: 1.5rem;">বার্ষিক গেট-টুগেদার অনুষ্ঠান</h3>
+            <p style="color: var(--text-muted);">ভাদুর মিয়া বাড়ির সকল সদস্য ও গুণীজনদের মিলনমেলা ও বিশেষ গেট-টুগেদার।</p>
           </div>
         </div>
       </section>
 
       <section class="section group-section bg-light">
         <div class="container">
-          <h2 class="section-title">আমাদের ফেসবুক গ্রুপ</h2>
-          <p style="margin-bottom: 20px;">আমাদের অফিশিয়াল ফেসবুক গ্রুপে জয়েন করুন:</p>
-          <a href="https://www.facebook.com/share/g/197qJGTB8G/" target="_blank" rel="noopener noreferrer" class="group-btn-link">👥 ফেসবুক গ্রুপে জয়েন করুন</a>
+          <h2 class="section-title">সোশ্যাল কমিউনিটি</h2>
+          <p style="margin-bottom: 20px; color: var(--text-muted);">আমাদের অফিশিয়াল ফেসবুক গ্রুপে যুক্ত হয়ে আপডেট থাকুন:</p>
+          <a href="https://www.facebook.com/share/g/197qJGTB8G/" target="_blank" rel="noopener noreferrer" class="group-btn-link">👥 ফেসবুক গ্রুপে জয়েন করুন</a>
         </div>
       </section>
 
       <section class="section" style="text-align: center;">
         <div class="container">
-          <h2 class="section-title">আমাদের অবস্থান ও গুগল ম্যাপ</h2>
-          <p style="margin-bottom: 15px;">📍 <strong>ঠিকানা:</strong> Bhadur Mia Bari, এরশাদ হোসেন রোড, রামগঞ্জ ৩৭২০।</p>
+          <h2 class="section-title">গুগল ম্যাপ লোকেশন</h2>
+          <p style="margin-bottom: 20px; color: var(--text-muted);">📍 Bhadur Mia Bari, এরশাদ হোসেন রোড, রামগঞ্জ ৩৭২০।</p>
           <div class="map-box">
-            <iframe src="https://maps.google.com/maps?q=Bhadur+Mia+Bari,Ershad+Hossain+Rd,Ramganj+3720&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://maps.google.com/maps?q=Bhadur+Mia+Bari,Ershad+Hossain+Rd,Ramganj+3720&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
       </section>
@@ -300,15 +285,15 @@
     <div id="elders-tab" class="tab-content">
       <section class="section">
         <div class="container">
-          <h2 class="section-title">📖 আমাদের বই ও প্রকাশনা</h2>
+          <h2 class="section-title">ঐতিহাসিক প্রকাশনা ও বই</h2>
           <div class="heritage-grid" style="grid-template-columns: 1fr;">
             <div class="heritage-card" style="display: flex; flex-wrap: wrap; align-items: center;">
-              <img src="https://via.placeholder.com/600x400?text=Alokito+Mia+Bari+Book" alt="বই মোড়ক" style="max-width: 400px; width: 100%;">
-              <div class="heritage-content" style="flex: 1; padding: 30px;">
-                <span class="event-badge-tag" style="background: var(--nav-bg);">বিশেষ প্রকাশনা</span>
-                <h3 style="font-size: 1.6rem;">"আলোকিত মিয়া বাড়ি" মোড়ক উন্মোচন</h3>
-                <p style="font-size: 1.05rem; margin-top: 10px;">
-                  ১৮ ফেব্রুয়ারি ২০২৩ তারিখে মরহুম দেলোয়ার হোসেন (পিএসপি)-এর কনিষ্ঠ পুত্র জাহিদ হোসেন প্রিতমের হাত ধরে <strong>"আলোকিত মিয়া বাড়ি"</strong> বইটির শুভ মোড়ক উন্মোচন করা হয়। এই বইটিতে ভাদুর মিয়া বাড়ির গৌরবোজ্জ্বল ইতিহাস ও ঐতিহ্য লিপিবদ্ধ রয়েছে।
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80" alt="বই" style="max-width: 400px; width: 100%;">
+              <div class="heritage-content" style="flex: 1; padding: 40px;">
+                <span class="event-badge-tag" style="background: #fef3c7; color: #d97706;">বিশেষ প্রকাশনা</span>
+                <h3 style="font-size: 1.8rem; margin-top: 10px;">"আলোকিত মিয়া বাড়ি" মোড়ক উন্মোচন</h3>
+                <p style="font-size: 1rem; margin-top: 15px;">
+                  ১৮ ফেব্রুয়ারি ২০২৩ তারিখে মরহুম দেলোয়ার হোসেন (পিএসপি)-এর কনিষ্ঠ পুত্র জাহিদ হোসেন প্রিতমের হাত ধরে <strong>"আলোকিত মিয়া বাড়ি"</strong> বইটির শুভ মোড়ক উন্মোচন করা হয়। বইটিতে মিয়া বাড়ির দীর্ঘ গৌরবোজ্জ্বল ইতিহাস লিপিবদ্ধ রয়েছে।
                 </p>
               </div>
             </div>
@@ -318,47 +303,19 @@
 
       <section class="section bg-light">
         <div class="container">
-          <h2 class="section-title">👑 বাড়ির গুরুজন ও গুণীজন</h2>
+          <h2 class="section-title">পরিবারের গুরুজন ও আদি পুরুষ</h2>
           <div class="vip-category">
-            <h3 class="category-title">বংশের প্রতিষ্ঠাতা ও আদি পুরুষ</h3>
+            <h3 class="category-title">বংশের প্রতিষ্ঠাতা</h3>
             <div class="vip-grid">
               <div class="vip-card">
                 <div class="vip-name">মরহুম দৌলত গাজী খান</div>
-                <div class="vip-title-tag">মিয়া বংশ ও ভাদুর মিয়া বাড়ির প্রতিষ্ঠাতা</div>
+                <div class="vip-title-tag">প্রতিষ্ঠাতা পুরুষ</div>
                 <p class="vip-history">পারস্য বংশোদ্ভূত ও মোগল রাজদরবারের সভাসদ। ১৮৫৭ সালে সিপাহী বিদ্রোহের পর সম্রাট বাহাদুর শাহের সাথে রামগঞ্জে আগমন ও বসতি স্থাপন করেন।</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </div>
-
-    <!-- REFINED AI FLOATING BUTTON -->
-    <button class="ai-widget-btn" onclick="toggleAIChat()" title="AI Assistant">
-      <svg class="ai-custom-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="#f4b41a"/>
-        <path d="M19 2L20.25 5.75L24 7L20.25 8.25L19 12L17.75 8.25L14 7L17.75 5.75L19 2Z" fill="#ffffff" opacity="0.8"/>
-      </svg>
-    </button>
-
-    <!-- REFINED AI CHAT BOX -->
-    <div class="ai-chat-box" id="aiChatBox">
-      <div class="ai-chat-header">
-        <div class="ai-chat-header-title">
-          <svg style="width: 22px; height: 22px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="#f4b41a"/>
-          </svg>
-          <span id="aiHeaderTitle">Gemini AI Assistant</span>
-        </div>
-        <button class="ai-close-btn" onclick="toggleAIChat()">✖</button>
-      </div>
-      <div class="ai-chat-messages" id="aiMessages">
-        <div class="ai-msg bot" id="welcomeMsg">হ্যালো! আমি আপনার পার্সোনাল জেমিনি এআই অ্যাসিস্ট্যান্ট। আপনাকে কীভাবে আজ সাহায্য করতে পারি? 😊</div>
-      </div>
-      <div class="ai-chat-input-area">
-        <input type="text" id="aiUserInput" placeholder="যেকোনো কথা বা প্রশ্ন লিখুন..." onkeypress="handleAIPress(event)">
-        <button class="ai-send-btn" onclick="sendAIMessage()">পাঠান</button>
-      </div>
     </div>
 
     <footer>
@@ -370,7 +327,6 @@
 
   <script>
     const ADMIN_USER = "Zayan001";
-    let chatMemory = [];
 
     function escapeHTML(str) {
       if (!str) return '';
@@ -389,76 +345,6 @@
       if(tabId === 'home-tab') document.getElementById('btn-home-tab').classList.add('active');
       else if(tabId === 'elders-tab') document.getElementById('btn-elders-tab').classList.add('active');
       window.scrollTo(0, 0);
-    }
-
-    function toggleAIChat() {
-      const box = document.getElementById('aiChatBox');
-      box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
-    }
-
-    function handleAIPress(e) {
-      if (e.key === 'Enter') sendAIMessage();
-    }
-
-    // স্মার্ট চ্যাট প্রসেসিং ও রিফাইন্ড এআই রেসপন্স ইঞ্জিন (API Key ছাড়া)
-    function sendAIMessage() {
-      const input = document.getElementById('aiUserInput');
-      const text = input.value.trim();
-      if (!text) return;
-
-      const msgsDiv = document.getElementById('aiMessages');
-      const activeUser = localStorage.getItem('logged_in_user') || 'বন্ধু';
-
-      msgsDiv.innerHTML += `<div class="ai-msg user">${escapeHTML(text)}</div>`;
-      chatMemory.push({ sender: 'user', text: text });
-      input.value = '';
-      msgsDiv.scrollTop = msgsDiv.scrollHeight;
-
-      setTimeout(() => {
-        let reply = generateSmartResponse(text, activeUser);
-        msgsDiv.innerHTML += `<div class="ai-msg bot">${reply}</div>`;
-        chatMemory.push({ sender: 'bot', text: reply });
-        msgsDiv.scrollTop = msgsDiv.scrollHeight;
-      }, 500);
-    }
-
-    function generateSmartResponse(query, username) {
-      const q = query.toLowerCase();
-
-      if (/^(hi|hello|hey|হাই|হ্যালো|সালাম|assalamu alaikum)/.test(q)) {
-        return `ওয়া আলাইকুমুস সালাম/হ্যালো ${username}! বলুন, আজ আপনাকে কী নিয়ে সাহায্য করতে পারি? 😊`;
-      }
-      if (q.includes('আমার নাম কী') || q.includes('আমার নাম কি')) {
-        return `আপনার নাম তো "${username}"! আপনার প্রোফাইল থেকে বিষয়টি আমার মনে আছে।`;
-      }
-      if (chatMemory.length > 2 && (q.includes('আগের') || q.includes('সেটা') || q.includes('তার মানে'))) {
-        const lastUserMsg = chatMemory[chatMemory.length - 2].text;
-        return `হ্যাঁ ${username}, আপনি একটু আগে "${lastUserMsg}" নিয়ে কথা বলছিলেন। এ বিষয়ে কি আরও কোনো তথ্য চান?`;
-      }
-      if (q.includes('ইতিহাস') || q.includes('প্রতিষ্ঠা') || q.includes('দৌলত গাজী')) {
-        return `শুনুন ${username}, ভাদুর মিয়া বাড়ি ও মিয়া বংশের প্রতিষ্ঠাতা হলেন মরহুম দৌলত গাজী খান। তিনি ১৮৫৭ সালে সিপাহী বিদ্রোহের পর রামগঞ্জে আগমন ও বসতি স্থাপন করেন।`;
-      }
-      if (q.includes('মসজিদ')) {
-        return `${username} ভাই, মিয়া বাড়ি জামে মসজিদটি উনবিংশ শতাব্দীর শুরুতে মোগল আমলের শেষভাগে প্রতিষ্ঠিত হয়েছিল এবং ২০০২ সালে মার্বেল পাথরে পুনর্নির্মিত হয়।`;
-      }
-      if (q.includes('এরশাদ মঞ্জিল')) {
-        return `ঐতিহ্যবাহী 'এরশাদ মঞ্জিল' ১৮৯৫ থেকে ১৯০৫ সালের মধ্যে নির্মিত তৎকালীন নোয়াখালী অঞ্চলের বিরল ৩টি ইটের দালানের একটি।`;
-      }
-      if (q.includes('কেমন আছো') || q.includes('কেমন আছেন')) {
-        return `আমি আলহামদুলিল্লাহ ভালো আছি ${username}! আপনার দিনকাল কেমন যাচ্ছে?`;
-      }
-      if (q.includes('ধন্যবাদ') || q.includes('thanks')) {
-        return `আপনাকেও অনেক ধন্যবাদ ${username}! যেকোনো সময় যেকোনো প্রয়োজনে আমাকে বলতে পারেন।`;
-      }
-
-      const smartFallbacks = [
-        `খুব সুন্দর একটি বিষয় নিয়ে কথা বলেছেন, ${username}! এ বিষয়ে আপনার আরও কোনো নির্দিষ্ট মতামত আছে কি?`,
-        `আপনার কথাটি দারুণ লেগেছে, ${username}। আপনি চাইলে ভাদুর মিয়া বাড়ির ইতিহাস কিংবা অন্য যেকোনো সাধারণ জ্ঞান নিয়ে আমার সাথে আলোচনা চালিয়ে যেতে পারেন।`,
-        `বিষয়টি সত্যিই চমৎকার, ${username}! বলুন, এ ব্যাপারে আপনাকে আর কীভাবে সহায়তা করতে পারি?`,
-        `আপনার এই চিন্তাটি বেশ বুদ্ধিমত্তার পরিচয় দেয়, ${username}। এ নিয়ে বিস্তারিত আরও কিছু কি জানতে চান?`
-      ];
-
-      return smartFallbacks[Math.floor(Math.random() * smartFallbacks.length)];
     }
 
     function showRegisterForm() {
@@ -481,12 +367,12 @@
 
       let users = JSON.parse(localStorage.getItem('site_users_db')) || {};
       if (users[name]) {
-        alert('এই নামের অ্যাকাউন্ট তৈরি করা আছে!');
+        alert('এই নামের অ্যাকাউন্ট ইতিমধ্যে বিদ্যমান!');
         return;
       }
       users[name] = { password: pass, birthdate, religion, family };
       localStorage.setItem('site_users_db', JSON.stringify(users));
-      alert('অ্যাকাউন্ট সফলভাবে তৈরি হয়েছে!');
+      alert('সফলভাবে রেজিস্ট্রেশন সম্পন্ন হয়েছে!');
       logUserIn(name);
     }
 
@@ -499,7 +385,7 @@
       if (users[name] && users[name].password === pass) {
         logUserIn(name);
       } else {
-        alert('নাম অথবা পাসওয়ার্ড ভুল হয়েছে!');
+        alert('ভুল নাম অথবা পাসওয়ার্ড প্রদান করা হয়েছে!');
       }
     }
 
@@ -513,7 +399,6 @@
 
     function handleLogout() {
       localStorage.removeItem('logged_in_user');
-      chatMemory = [];
       checkAuthStatus();
     }
 
@@ -529,8 +414,6 @@
         mainContent.style.display = 'block';
         const cleanName = escapeHTML(activeUser);
         navUsername.innerHTML = `👤 <strong>${cleanName}</strong> ${activeUser === ADMIN_USER ? '<span class="admin-badge">ADMIN</span>' : ''}`;
-        
-        document.getElementById('welcomeMsg').innerHTML = `হ্যালো ${cleanName}! আমি আপনার পার্সোনাল জেমিনি এআই অ্যাসিস্ট্যান্ট। আজ আপনাকে কীভাবে সাহায্য করতে পারি? 😊`;
 
         if (activeUser === ADMIN_USER) {
           adminPanel.style.display = 'block';
@@ -552,7 +435,7 @@
       let users = JSON.parse(localStorage.getItem('site_users_db')) || {};
       const userNames = Object.keys(users);
       if (userNames.length === 0) {
-        memberListDiv.innerHTML = '<p style="color: var(--text-muted);">কোনো সদস্য নেই।</p>';
+        memberListDiv.innerHTML = '<p style="color: var(--text-muted); text-align: center;">কোনো সদস্য নিবন্ধিত নেই।</p>';
         return;
       }
       memberListDiv.innerHTML = userNames.map(name => `
@@ -568,7 +451,7 @@
       let logs = JSON.parse(localStorage.getItem('login_logs')) || {};
       const userNames = Object.keys(users);
       if (userNames.length === 0) {
-        logsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;">কোনো রেকর্ড নেই</td></tr>';
+        logsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;">রেকর্ড পাওয়া যায়নি</td></tr>';
         return;
       }
       logsBody.innerHTML = userNames.map(name => `
@@ -577,7 +460,7 @@
           <td>${escapeHTML(users[name].birthdate || 'N/A')}</td>
           <td>${escapeHTML(users[name].religion || 'N/A')}</td>
           <td>${escapeHTML(users[name].family || 'N/A')}</td>
-          <td>${escapeHTML(logs[name] || 'লগইন করেনি')}</td>
+          <td>${escapeHTML(logs[name] || 'N/A')}</td>
         </tr>
       `).join('');
     }
@@ -587,7 +470,7 @@
       const activeUser = localStorage.getItem('logged_in_user');
       const comment = document.getElementById('userComment').value.trim();
       const ratingElem = document.querySelector('input[name="rating"]:checked');
-      if (!ratingElem) { alert('অনুগ্রহ করে একটি রেটিং (স্টার) নির্বাচন করুন!'); return; }
+      if (!ratingElem) { alert('অনুগ্রহ করে স্টার রেটিং নির্বাচন করুন!'); return; }
       const rating = parseInt(ratingElem.value);
       let reviews = JSON.parse(localStorage.getItem('site_reviews')) || [];
       reviews.unshift({ name: activeUser, comment, rating });
@@ -601,7 +484,7 @@
       const display = document.getElementById('reviewsDisplay');
       if (!display) return;
       if (reviews.length === 0) {
-        display.innerHTML = '<p style="text-align:center; color: var(--text-muted); grid-column: 1/-1;">এখনো কোনো রিভিউ দেওয়া হয়নি।</p>';
+        display.innerHTML = '<p style="text-align:center; color: var(--text-muted); grid-column: 1/-1;">এখনো কোনো রিভিউ জমা পড়েনি।</p>';
         return;
       }
       display.innerHTML = reviews.map(r => `
